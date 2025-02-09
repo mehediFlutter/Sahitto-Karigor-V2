@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:sahitto_karigor/UI/controller/const/const.dart';
 
+import '../widgets/poet_image_slider.dart';
 import '../widgets/re_usable_mother_widget.dart';
-import 'dash_board.dart';
+import 'poet_list_screen.dart';
 
 class NewDashboard extends StatefulWidget {
   const NewDashboard({super.key});
@@ -19,12 +21,15 @@ class _NewDashboardState extends State<NewDashboard> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            height15,
+            PoetImageSlider(),
+            height16,
             LiteraturePeriod(
               text: 'আদিম যুগ ',
               //(৬৫০ - ১২০০ খ্রি)
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => DashBoard()));
+                    MaterialPageRoute(builder: (context) => PoetListScreen()));
               },
             ),
             LiteraturePeriod(
@@ -68,6 +73,7 @@ class LiteraturePeriod extends StatelessWidget {
                 end: Alignment.bottomCenter,
                 colors: [
                   Color(0xFF008000),
+                  Color.fromARGB(255, 0, 192, 0),
                   Color(0xFFe9ffe4),
                 ],
               ),
@@ -79,7 +85,7 @@ class LiteraturePeriod extends StatelessWidget {
                   Text(
                     text,
                     style: TextStyle(
-                        color: Colors.black,
+                        color:  Colors.white,
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                         height: 0),

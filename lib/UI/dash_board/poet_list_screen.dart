@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 import '../widgets/poet_card.dart';
 import '../widgets/re_usable_mother_widget.dart';
 
-class DashBoard extends StatefulWidget {
-  const DashBoard({super.key});
+class PoetListScreen extends StatefulWidget {
+  const PoetListScreen({super.key});
 
   @override
-  State<DashBoard> createState() => _DashBoardState();
+  State<PoetListScreen> createState() => _PoetListScreenState();
 }
 
-class _DashBoardState extends State<DashBoard> {
+class _PoetListScreenState extends State<PoetListScreen> {
   @override
   Widget build(BuildContext context) {
     return ReUsableMotherWidget(

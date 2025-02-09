@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 
 import '../controller/const/const.dart';
 
-class HomeSlider extends StatefulWidget {
-  const HomeSlider({super.key});
+class PoetImageSlider extends StatefulWidget {
+  const PoetImageSlider({super.key});
 
   @override
-  State<HomeSlider> createState() => _HomeSliderState();
+  State<PoetImageSlider> createState() => _PoetImageSliderState();
 }
 
-class _HomeSliderState extends State<HomeSlider> {
+class _PoetImageSliderState extends State<PoetImageSlider> {
   final ValueNotifier<int> _selectedSlider = ValueNotifier(0);
 
   @override
@@ -22,6 +22,7 @@ class _HomeSliderState extends State<HomeSlider> {
           options: CarouselOptions(
             height: 180.0,
             autoPlay: true,
+            enlargeCenterPage: true,
             autoPlayInterval: Duration(seconds: 3),
             onPageChanged: (int page, _) {
               _selectedSlider.value = page;
@@ -33,10 +34,21 @@ class _HomeSliderState extends State<HomeSlider> {
                 return Container(
                     width: MediaQuery.of(context).size.width,
                     margin: EdgeInsets.symmetric(horizontal: 5.0),
-                    decoration: BoxDecoration(color: Colors.amber),
-                    child: Text(
-                      'text $i',
-                      style: TextStyle(fontSize: 16.0),
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [
+                          Color(0xFF008000),
+                          Color(0xFFe9ffe4),
+                        ],
+                      ),
+                    ),
+                    child: Center(
+                      child: Text(
+                        'Poet Image $i',
+                        style: TextStyle(fontSize: 16.0),
+                      ),
                     ));
               },
             );
@@ -58,7 +70,7 @@ class _HomeSliderState extends State<HomeSlider> {
                   decoration: BoxDecoration(
                     border: Border.all(color: Colors.grey),
                     borderRadius: BorderRadius.circular(10),
-                    color: value == i ? AppColor.primary : null,
+                    color: value == i ? Colors.green : null,
                   ),
                 ),
               ),
