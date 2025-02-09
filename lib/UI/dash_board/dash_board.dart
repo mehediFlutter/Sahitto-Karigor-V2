@@ -1,7 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:sahitto_karigor/new_design/poet_card.dart';
-import 'package:sahitto_karigor/new_design/re_usable_mother_widget.dart';
+
+import '../widgets/poet_card.dart';
+import '../widgets/re_usable_mother_widget.dart';
 
 class DashBoard extends StatefulWidget {
   const DashBoard({super.key});

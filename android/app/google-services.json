@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "148583518696",
+    "project_id": "sahitto-karigor",
+    "storage_bucket": "sahitto-karigor.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:148583518696:android:4264c29ceb1d2d5e6d145d",
+        "android_client_info": {
+          "package_name": "com.example.sahitto_karigor"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDb-W_W8rwuKUMXTqrAfA2BB7EijZHBRwc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

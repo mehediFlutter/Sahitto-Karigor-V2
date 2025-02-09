@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:sahitto_karigor/new_design/dash_board.dart';
-import 'package:sahitto_karigor/new_design/re_usable_mother_widget.dart';
+
+import '../widgets/re_usable_mother_widget.dart';
+import 'dash_board.dart';
 
 class NewDashboard extends StatefulWidget {
   const NewDashboard({super.key});
