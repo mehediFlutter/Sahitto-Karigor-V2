@@ -1,20 +1,21 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
-import '../widgets/poet_card.dart';
-import '../widgets/re_usable_mother_widget.dart';
+import '../../../widgets/poet_card.dart';
+import '../../../widgets/re_usable_mother_widget.dart';
 
-class PoetListScreen extends StatefulWidget {
-  const PoetListScreen({super.key});
+class MedievalPoetScreen extends StatefulWidget {
+  const MedievalPoetScreen({super.key});
 
   @override
-  State<PoetListScreen> createState() => _PoetListScreenState();
+  State<MedievalPoetScreen> createState() => _MedievalPoetScreenState();
 }
 
-class _PoetListScreenState extends State<PoetListScreen> {
+class _MedievalPoetScreenState extends State<MedievalPoetScreen> {
   @override
   Widget build(BuildContext context) {
     return ReUsableMotherWidget(
+      title: 'মধ্যযুগ',
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
         child: Column(

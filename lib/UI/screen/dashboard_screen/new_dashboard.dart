@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:sahitto_karigor/UI/controller/const/const.dart';
 
-import '../widgets/poet_image_slider.dart';
-import '../widgets/re_usable_mother_widget.dart';
-import 'poet_list_screen.dart';
+import '../../widgets/poet_image_slider.dart';
+import '../../widgets/re_usable_mother_widget.dart';
+import '../poet_list_screen/medieval_period/medieval_poet_list_screen.dart';
 
 class NewDashboard extends StatefulWidget {
   const NewDashboard({super.key});
@@ -16,26 +16,45 @@ class _NewDashboardState extends State<NewDashboard> {
   @override
   Widget build(BuildContext context) {
     return ReUsableMotherWidget(
+      isAppBarNeeded: false,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             height15,
+            Text(
+              "বাংলা সাহিত্য কারিগর",
+              style: TextStyle(
+                  fontSize: 25,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.black),
+            ),
+            SizedBox(
+               width: double.infinity,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Text('"আমার আপনার চেয়ে আপন যে জন',style: TextStyle(  fontStyle: FontStyle.italic,height: 0),),
+                  Text('খুঁজি তারে আমি আপনায়।"',style: TextStyle(  fontStyle: FontStyle.italic,height: 0),),
+                  Text('--- কাজী নজরুল ইসলাম',style: TextStyle(  fontStyle: FontStyle.italic,height: 0),),
+                ],
+              ),
+            ),
             PoetImageSlider(),
             height16,
             LiteraturePeriod(
               text: 'আদিম যুগ ',
               //(৬৫০ - ১২০০ খ্রি)
-              onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => PoetListScreen()));
-              },
+                onTap: () {},
             ),
             LiteraturePeriod(
               text: 'মধ্যযুগ ',
+               onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => MedievalPoetScreen()));
+              },
               //(১২০১ - ১৮০০ খ্রি)
-              onTap: () {},
+           
             ),
           ],
         ),
@@ -85,7 +104,7 @@ class LiteraturePeriod extends StatelessWidget {
                   Text(
                     text,
                     style: TextStyle(
-                        color:  Colors.white,
+                        color: Colors.white,
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                         height: 0),

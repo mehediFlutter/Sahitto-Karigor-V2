@@ -56,11 +56,12 @@ class PoetCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      data['name'] ?? 'None',
+                      data['name_bangla'] ?? 'None',
                       style: TextStyle(
                         fontSize: 16,
                         color: Colors.black,
                         fontWeight: FontWeight.w600,
+                        height: 0
                       ),
                       overflow: TextOverflow.ellipsis,
                     ),
@@ -70,6 +71,7 @@ class PoetCard extends StatelessWidget {
                         fontSize: 14,
                         color: Colors.black,
                         fontWeight: FontWeight.w500,
+                          height: 0
                       ),
                     ),
                   ],
